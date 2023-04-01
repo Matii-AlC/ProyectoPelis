@@ -1,0 +1,20 @@
+/*GOOGLE FONT FILE*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,300;1,900&display=swap');
+
+/* Texto de la pagina ************************************************************/
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: azure;
+}
+/*********************************************************************************/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(10, 89, 246, 0.9));
+}
+
+nav {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(88, 23, 138, 0.9));
+}
