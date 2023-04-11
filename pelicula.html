@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>PELICULAS.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>body {
+font-family: "Lato", sans-serif
+
+}
+
+.mySlides {
+display: none
+}
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+<div class="w3-bar w3-black w3-card">
+<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+class="fa fa-bars"></i></a>
+
+<a href="index.html" class="w3-bar-item w3-button w3-padding-large">INICIO</a>
+
+<a href="#" class="w3-bar-item w3-button w3-padding-large">ESTRENOS</a>
+<a href="#lo mas visto" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LO MAS VISTO</a>
+<a href="#recomendado" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RECOMENDADO</a>
+
+<div class="w3-dropdown-hover w3-hide-small">
+<button class="w3-padding-large w3-button" title="More">CATEGORIA <i class="fa fa-caret-down"></i></button>
+<div class="w3-dropdown-content w3-bar-block w3-card-4">
+              <a href="#" class="w3-bar-item w3-button">Merassd</a>
+                    <a href="#" class="w3-bar-item w3-button">hifssi</a>
+                    <a href="#" class="w3-bar-item w3-button">desasdo</a>
+                    <a href="#" class="w3-bar-item w3-button">comedia</a>
+                    <a href="#" class="w3-bar-item w3-button">de miedo</a>
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
+                    class="fa fa-search"></i></a>
+        </div>
+    </div>
+<!-- Barra de navegación ) -->
+
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#lo mas visto" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">LO MAS VISTO</a>
+        <a href="#recomendado" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RECOMENDADO</a>
+      
+        <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CATEGORIAS</a>
+    </div>
+
+    <!-- Pagina -->
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+        <!-- el carrusel -->
+        <div class="mySlides w3-display-container w3-center">
+            
+            <img src="img/laballena.jpg"  style="width:100%">
+            
+            
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>LA BALLENA </h3>
+                <p><b>Un solitario profesor de inglés con obesidad severa (Brendan Fraser) intenta reconectar con su hija adolescente en una última oportunidad de redención.</b></p>
+                <button class="w3-button w3-black w3-margin-bottom"
+                onclick="document.getElementById('ticketModal').style.display='block'">VER AHORA</button>
+            </div>
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img src="img/johnwick.jpg" style="width:100%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>JOHN WICK</h3>
+                <p><b>Legendario asesino retirado, vuelve de nuevo a la acción impulsado por una incontrolable búsqueda de venganza. Al tener que luchar contra asesinos sedientos de sangre que le persiguen</b></p>
+                <button class="w3-button w3-black w3-margin-bottom"
+                onclick="document.getElementById('ticketModal').style.display='block'">VER AHORA</button>
+            </div>
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img src="img/supermario.png" style="width:100%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>SUPER MARIO</h3>
+                <p><b>Mientras trabajan en una avería subterránea, los fontaneros de Brooklyn, Mario y su hermano Luigi, viajan por una misteriosa tubería hasta un nuevo mundo mágico.</b></p>
+                <button class="w3-button w3-black w3-margin-bottom"
+                onclick="document.getElementById('ticketModal').style.display='block'">VER AHORA</button>
+            </div>
+        </div>
+
+        <!-- seccion de  lo mas visto  -->
+        
+</div>
+
+        <div class="contenedor-md mt-3 fa-border" id="lo mas visto">
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" >
+            <h2 class="w3-wide">LO MAS VISTO </h2>
+           
+            <div class="w3-black" id="lo mas visto">
+                <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+                  
+    
+                    <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+                        <div class="w3-third w3-margin-bottom">
+                            
+                            <img src="img/babylon.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>BABYLON</b></p>
+                                <p></p>
+                                <button class="w3-button w3-black w3-margin-bottom"
+                                    onclick="document.getElementById('ticketModal').style.display='block'">VER AHORA</button>
+                            </div>
+                        </div>
+                        <div class="w3-third w3-margin-bottom">
+                            <img src="img/creed.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>CREED</b></p>
+                               
+                                <p> un amigo de la infancia y antiguo prodigio del boxeo, reaparece después de cumplir una larga condena en prisión</p>
+                                <button class="w3-button w3-black w3-margin-bottom"
+                                    onclick="document.getElementById('ticketModal').style.display='block'"> VER AHORA</button>
+                            </div>
+                        </div>
+                        <div class="w3-third w3-margin-bottom">
+                            <img src="img/elhijo.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>EL HIJO</b></p>
+                               
+                                <p> un amigo de la infancia y antiguo prodigio del boxeo, reaparece después de cumplir una larga condena en prisión</p>
+                                <button class="w3-button w3-black w3-margin-bottom"
+                                    onclick="document.getElementById('ticketModal').style.display='block'"> VER AHORA</button>
+                            </div>
+                        </div>
+                     
+                        <div class="w3-third w3-margin-bottom">
+                            <img src="img/elemental.png" alt="New York" style="width:100%" class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>ELEMENTAL</b></p>
+                               
+                                <p> </p>
+                                <button class="w3-button w3-black w3-margin-bottom"
+                                    onclick="document.getElementById('ticketModal').style.display='block'"> VER AHORA</button>
+                            </div>
+                        </div>
+
+                        <div class="w3-third w3-margin-bottom">
+                            <img src="img/scream.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>SCREAM</b></p>
+                               
+                                <p>ras los últimos asesinatos de Ghostface, los cuatro supervivientes abandonan Woodsboro para dar comienzo a un nuevo capítulo en la ciudad de Nueva York.</p>
+                                <button class="w3-button w3-black w3-margin-bottom"
+                                    onclick="document.getElementById('ticketModal').style.display='block'">VER AHORA</button>
+                            </div>
+                        </div>
+                        <div class="w3-third w3-margin-bottom">
+                            <img src="img/interestelar.png" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>INTERESTALAR</b></p>
+                               
+                                <p>viajar más allá de nuestra galaxia para descubrir algún planeta en otra que pueda garantizar el futuro de la raza humana..</p>
+                                <button class="w3-button w3-black w3-margin-bottom"
+                                    onclick="document.getElementById('ticketModal').style.display='block'">VER AHORAs</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+         
+        </div>
+    </div>
+
+        <!-- seccio de pelis recomendadas  -->
+        <div class="w3-black" id="recomendado">
+            <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+                <h2 class="w3-wide">RECOMENDADO </h2>
+               
+
+                
+
+                <div class="w3-row-padding w3-padding-32" style="margin:499 -16px">
+                    <div class="w3-third w3-margin-bottom">
+                        <img src="img/creed.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p><b>CREED</b></p>
+                           
+                            <p> un amigo de la infancia y antiguo prodigio del boxeo, reaparece después de cumplir una larga condena en prisión</p>
+                            <button class="w3-button w3-black w3-margin-bottom"
+                                onclick="document.getElementById('ticketModal').style.display='block'"> VER AHORA</button>
+                        </div>
+                    </div>
+
+                    <div class="w3-third w3-margin-bottom">
+                        <img src="img/ellashablan.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p><b>ELLAS HABLAN</b></p>
+                           
+                            <p> </p>
+                            <button class="w3-button w3-black w3-margin-bottom"
+                                onclick="document.getElementById('ticketModal').style.display='block'"> VER AHORA</button>
+                        </div>
+                    </div>
+                    <div class="w3-third w3-margin-bottom">
+                        <img src="img/eltriangulode la tristeza.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p><b>EL TRIANGULO DE LA TRISTE</b></p>
+                           
+                            <p> un amigo de la infancia y antiguo prodigio del boxeo, reaparece después de cumplir una larga condena en prisión</p>
+                            <button class="w3-button w3-black w3-margin-bottom"
+                                onclick="document.getElementById('ticketModal').style.display='block'"> VER AHORA</button>
+                        </div>
+                    </div>
+                    <div class="w3-third w3-margin-bottom">  
+                        <img src="img/antman.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p><b>ANT-MAN</b></p>
+                          
+                            <p>exploran el Reino Cuántico, donde interactúan con extrañas criaturas y se embarcan en una aventura que va más allá de los límites de lo que creían posible</p>
+                            <button class="w3-button w3-black w3-margin-bottom"
+                                onclick="document.getElementById('ticketModal').style.display='block'">VER AHORAs</button>
+                        </div>
+                    </div>
+                    <div class="w3-third w3-margin-bottom">
+                        <img src="img/batman.png" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p><b>BATMAN</b></p>
+                            
+                            <p>El Caballero Oscuro se topará con Selina Kyle Catwoman, Oswald Cobblepot, El Pingüino, Carmine Falcone y Edward Nashton,Enigma</p>
+                            <button class="w3-button w3-black w3-margin-bottom"
+                                onclick="document.getElementById('ticketModal').style.display='block'">VER AHORA</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+           <!-- Ticket Modal -->
+           <div id="ticketModal" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top w3-card-4">
+                <header class="w3-container w3-teal w3- w3-padding-32">
+                    <span onclick="document.getElementById('ticketModal').style.display='none'"
+                        class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+                    <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>REGISTRO</h2>
+                </header>
+                <div class="w3-container">
+                    <p><label><i class="fa fa-chevron-circle-down"></i> correo</label></p>
+                    <input class="w3-input w3-border" type="text" placeholder="ingresa correo">
+                    <p><label><i class="fa fa-user-secret"></i> contraseña</label></p>
+                    <input class="w3-input w3-animate-opacity" type="text" placeholder="contraseña">
+                    <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">ENTRAR <i
+                            class="fa fa-check"></i></button>
+                    <button class="w3-button w3-red w3-section"
+                        onclick="document.getElementById('ticketModal').style.display='none'">Cerrar <i
+                            class="fa fa-remove"></i></button>
+                    <p class="w3-right">ayuda <a href="#" class="w3-text-blue">help?</a></p>
+                </div>
+            </div>
+        </div>
+
+      
+
+    <!-- pie pagian -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+       
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+       
+   
+    <!-- el fin . -->
+    </footer>
+
+    <script>
+        // cambiar imagen cada 3
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+// alternar el menú en pantallas 
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+      
+// clic fuera del modal 
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
