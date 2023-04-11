@@ -18,3 +18,11 @@ body {
 nav {
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(88, 23, 138, 0.9));
 }
+
+footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(88, 23, 138, 0.9));
+}
+
+.colorcard {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(88, 23, 138, 0.9));
+}
