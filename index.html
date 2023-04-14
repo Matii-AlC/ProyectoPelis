@@ -6,8 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUMM!</title>
+    <link rel="shortcut icon" href="images/homepage/logo.png" type="image/x-icon">
+    
     <!--Css File-->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <!----CDNJS ARCHIVO PARA ICONOS IMPRESIONANTES DE FUENTE-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -20,6 +26,7 @@
 </head>
 
 <body>
+    
     <!-- Barra Navegación ------------------------------------------------->
     <nav class="navbar navbar-expand-sm bg-black navbar-dark pt-3">
         <div class="container-fluid">
@@ -49,30 +56,109 @@
             </div>
         </div>
     </nav>
-    <!----------------------------------------------------------------------->
+    <header>
 
-    
+           <!------------------------------wave----------------------------------------->
+<div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #302b63,;"></path></svg></div>
+<main>
+    <section class="textos-header">
+        <h1>Las mejores películas por SUMM!</h1>
+        <h2>Las peliculas mas taquilleras de la historia del cine</h2>
+    </section>
+    <section class="contenedor sobre-nosotros">
+        <div class="contenedor-sobre-nosotros">
+          <!-- Carousel ------------------------------------------------------------------------------------->
 
-    <!-------HERO SECTIO PART-->
 
-    <section>
-        <div class="heropage">
-            <div class="inside-heropage">
-                <span>VER EN VIVO</span>
-                <div class="line1 texto-estandar">
-                    <h1>THE LAST OF US</h1>
-                    <p>Acción, Drama, Sci-fi | 2023 | ESPAÑOL | 142 min</p>
-                    <div class="btn1">
-                        <a href=""><i class="fas fa-play"></i>Ver Ahora</a>
-                        <a href=""><i class="fas fa-heart"></i>Ver Luego</a>
-                    </div>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="colorcard text-white">
+                    <img src="https://wallpaperaccess.com/full/781822.jpg" alt="Breaking Bad" class="d-block w-100 p-2">
+                    <h1 class="p-3">
+                        Breaking Bad
+                        <div class="float-end">
+                            <p><i class="bi bi-star-fill"></i> 9.5 <img class="img-fluid" src="images/series/imdb.png"
+                                    alt="imdb" width="30px"></p>
+                        </div>
+                    </h1>
+                    <br>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="colorcard text-white">
+                    <img src="https://wallpapercave.com/wp/wp1941976.jpg" alt="The Wire" class="d-block w-100 p-2">
+                    <h1 class="p-3">
+                        The Wire
+                        <div class="float-end">
+                            <p><i class="bi bi-star-fill"></i> 9.3 <img class="img-fluid" src="images/series/imdb.png"
+                                    alt="imdb" width="30px"></p>
+                        </div>
+                    </h1>
+                    <br>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="colorcard text-white">
+                    <img src="https://external-preview.redd.it/PnUSogsjICtBSiZTugVGrX-BPiBv8-xXfzl5iaTAX3I.jpg?auto=webp&s=02a9a44d48481df75490f2ed4eba9e8c45f3b7f3"
+                        alt="Game Of Thrones" class="d-block w-100 p-2">
+                    <h1 class="p-3">
+                        Game Of Thrones
+                        <div class="float-end">
+                            <p><i class="bi bi-star-fill"></i> 9.2 <img class="img-fluid" src="images/series/imdb.png"
+                                    alt="imdb" width="30px"></p>
+                        </div>
+                    </h1>
+                    <br>
                 </div>
             </div>
         </div>
-        <div class="poster">
-            <img src="images/homepage/the-last-of-us-serie.jpg">
-        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+<header>
+    <!----------------------------------------------------------------------------------------------------->
+
+            <div class="contenido-textos"></div>
+        
     </section>
+    <section class="portafolio">
+        <div class="contenedor">
+            <h2 class="titulo"><span>Los estrenos mas esperados</span></h2>
+            <div class="galeria-port">
+        <div class="imagen-port">
+            <img src="img/ellashablan.jpg" alt="">
+            <div class="hover-galeria">
+                <img src="images/homepage/icono1.png" alt="">
+                <p> Mejores peliculas</p>
+        </div>
+    </div>
+
+<div class="imagen-port">
+    <img src="img/johnwick.jpg" alt="">
+    <div class="hover-galeria">
+        <img src="images/homepage/icono1.png" alt="">
+        <p> Mejores peliculas</p>
+</div>
+</div>
+</main>
+
+
 
 </body>
 
