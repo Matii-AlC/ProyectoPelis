@@ -11,13 +11,13 @@
 </head>
 
 <body>
+    <!-- Bar ----------------------------------------------------------------------------------------->
     <div class="w3-bar w3-black">
-        <img src="images/homepage/logonuevo.png" alt="logo" width="4%" class="w3-left">
         <button class="w3-bar-item w3-button" onclick="openCity('Ventas')">Ventas</button>
         <button class="w3-bar-item w3-button" onclick="openCity('Peliculas')">Peliculas</button>
         <button class="w3-bar-item w3-button" onclick="openCity('Clientes')">Clientes</button>
         <a href="ingreso-admin.html">
-            <button class="w3-bar-item w3-right w3-button w3-hover-red"><b>Cerrar Sesion</b></button>
+            <button class="w3-bar-item w3-right w3-button w3-hover-red"><b>Salir</b></button>
         </a>
     </div>
     <!-- Ventas ---------------------------------------------------------------------------------------------->
@@ -34,24 +34,36 @@
         <div class="w3-container w3-animate-zoom">
             <table class="w3-table w3-table-all">
                 <tr class="w3-black">
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Points</th>
+                    <th>Nro Venta</th>
+                    <th>Pelicula</th>
+                    <th>Cliente</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Total Venta</th>
                 </tr>
                 <tr>
-                    <td>Jill</td>
-                    <td>Smith</td>
-                    <td>50</td>
+                    <td>1</td>
+                    <td>La Ballena</td>
+                    <td>Raul Gonzalez</td>
+                    <td>17/04/23</td>
+                    <td>20:00</td>
+                    <td>$3.500</td>
                 </tr>
                 <tr>
-                    <td>Eve</td>
-                    <td>Jackson</td>
-                    <td>94</td>
+                    <td>2</td>
+                    <td>La Ballena</td>
+                    <td>Raul Gonzalez</td>
+                    <td>17/04/23</td>
+                    <td>20:00</td>
+                    <td>$3.500</td>
                 </tr>
                 <tr>
-                    <td>Adam</td>
-                    <td>Johnson</td>
-                    <td>67</td>
+                    <td>3</td>
+                    <td>La Ballena</td>
+                    <td>Carlos Villenas</td>
+                    <td>17/04/23</td>
+                    <td>20:00</td>
+                    <td>$3.500</td>
                 </tr>
             </table>
         </div>
@@ -66,28 +78,36 @@
             <button class="w3-button w3-black w3-hover-red">Eliminar</button>
         </div>
         <br>
-        <!-- Tabla de Ventas -->
+        <!-- Tabla de Peliculas -->
         <div class="w3-container w3-animate-zoom">
             <table class="w3-table w3-table-all">
                 <tr class="w3-black">
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Points</th>
+                    <th>ID Pelicula</th>
+                    <th>Nombre</th>
+                    <th>Genero</th>
+                    <th>Año</th>
+                    <th>Precio Entrada</th>
                 </tr>
                 <tr>
-                    <td>Jill</td>
-                    <td>Smith</td>
-                    <td>50</td>
+                    <td>1</td>
+                    <td>La Ballena</td>
+                    <td>Drama/Ficción</td>
+                    <th>2022</th>
+                    <th>$3.500</th>
                 </tr>
                 <tr>
-                    <td>Eve</td>
-                    <td>Jackson</td>
-                    <td>94</td>
+                    <td>2</td>
+                    <td>John Wick 4</td>
+                    <td>Accion</td>
+                    <th>2023</th>
+                    <th>$3.500</th>
                 </tr>
                 <tr>
-                    <td>Adam</td>
-                    <td>Johnson</td>
-                    <td>67</td>
+                    <td>3</td>
+                    <td>Elemental</td>
+                    <td>Infantil</td>
+                    <th>2023</th>
+                    <th>$3.500</th>
                 </tr>
             </table>
         </div>
@@ -107,24 +127,34 @@
         <div class="w3-container w3-animate-zoom">
             <table class="w3-table w3-table-all">
                 <tr class="w3-black">
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Points</th>
+                    <th>ID Cliente</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
                 </tr>
                 <tr>
-                    <td>Jill</td>
+                    <td>1</td>
+                    <td>Matias</td>
+                    <td>Lagos</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Matias</td>
+                    <td>Larenas</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Su</td>
                     <td>Smith</td>
-                    <td>50</td>
                 </tr>
                 <tr>
-                    <td>Eve</td>
-                    <td>Jackson</td>
-                    <td>94</td>
+                    <td>4</td>
+                    <td>Raul</td>
+                    <td>Gonzalez</td>
                 </tr>
                 <tr>
-                    <td>Adam</td>
-                    <td>Johnson</td>
-                    <td>67</td>
+                    <td>5</td>
+                    <td>Carlos</td>
+                    <td>Villenas</td>
                 </tr>
             </table>
         </div>
