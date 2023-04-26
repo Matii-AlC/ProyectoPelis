@@ -25,15 +25,17 @@
         <h2 class="w3-center w3-animate-zoom w3-opacity w3-wide"><b>Ventas</b></h2>
         <!-- Botones CRUD -->
         <div class="w3-animate-zoom" style="padding-left: 2%;">
-            <button class="w3-button w3-black w3-hover-blue">+</button>
-            <button class="w3-button w3-black w3-hover-amber">Editar</button>
-            <button class="w3-button w3-black w3-hover-red">Eliminar</button>
+            <button class="w3-button w3-black w3-hover-blue"
+                onclick="document.getElementById('crea_venta').style.display='block'">+</button>
+            <button class="w3-button w3-black w3-hover-amber w3-disabled">Editar</button>
+            <button class="w3-button w3-black w3-hover-red w3-disabled">Eliminar</button>
         </div>
         <br>
         <!-- Tabla de Ventas -->
         <div class="w3-container w3-animate-zoom">
             <table class="w3-table w3-table-all">
                 <tr class="w3-black">
+                    <th>Selector</th>
                     <th>Nro Venta</th>
                     <th>Pelicula</th>
                     <th>Cliente</th>
@@ -42,6 +44,11 @@
                     <th>Total Venta</th>
                 </tr>
                 <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </td>
                     <td>1</td>
                     <td>La Ballena</td>
                     <td>Raul Gonzalez</td>
@@ -50,6 +57,11 @@
                     <td>$3.500</td>
                 </tr>
                 <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </td>
                     <td>2</td>
                     <td>La Ballena</td>
                     <td>Raul Gonzalez</td>
@@ -58,6 +70,11 @@
                     <td>$3.500</td>
                 </tr>
                 <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </td>
                     <td>3</td>
                     <td>La Ballena</td>
                     <td>Carlos Villenas</td>
@@ -68,20 +85,62 @@
             </table>
         </div>
     </div>
+
+    <div id="crea_venta" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+            <header class="w3-container w3-black">
+                <span onclick="document.getElementById('crea_venta').style.display='none'"
+                    class="w3-button w3-display-topright w3-hover-red">Cerrar</span>
+            </header>
+            <div class="w3-container">
+                <h1>Ingrese la siguiente información:</h1>
+                <form class="w3-container">
+                    <p class="w3-wide w3-text-black">
+                        Nro de Compra: ?
+                    </p>
+                    <p>
+                        <label class="w3-text-black">Pelicula</label>
+                        <input class="w3-input w3-gray" type="text">
+                    </p>
+                    <p>
+                        <label class="w3-text-black">Cliente</label>
+                        <input class="w3-input w3-gray" type="text">
+                    </p>
+                    <p>
+                        <label class="w3-text-black">Fecha</label>
+                        <input class="w3-input w3-gray" type="text">
+                    </p>
+                    <p>
+                        <label class="w3-text-black">Hora</label>
+                        <input class="w3-input w3-gray" type="text">
+                    </p>
+                    <p>
+                        <label class="w3-text-black">Precio Venta</label>
+                        <input class="w3-input w3-gray" type="text">
+                    </p>
+                </form>
+            </div>
+            <div class="w3-center w3-padding-16">
+                <button class="w3-button w3-black w3-hover-green">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Peliculas ------------------------------------------------------------------------------------------>
     <div id="Peliculas" class="city" style="display:none">
         <h2 class="w3-center w3-animate-zoom w3-opacity w3-wide"><b>Peliculas</b></h2>
         <!-- Botones CRUD -->
         <div class="w3-animate-zoom" style="padding-left: 2%;">
-            <button class="w3-button w3-black w3-hover-blue">+</button>
-            <button class="w3-button w3-black w3-hover-amber">Editar</button>
-            <button class="w3-button w3-black w3-hover-red">Eliminar</button>
+            <button class="w3-button w3-black w3-hover-blue" onclick="document.getElementById('crea_pelicula').style.display='block'">+</button>
+            <button class="w3-button w3-black w3-hover-amber w3-disabled">Editar</button>
+            <button class="w3-button w3-black w3-hover-red w3-disabled">Eliminar</button>
         </div>
         <br>
         <!-- Tabla de Peliculas -->
         <div class="w3-container w3-animate-zoom">
             <table class="w3-table w3-table-all">
                 <tr class="w3-black">
+                    <th>Selector</th>
                     <th>ID Pelicula</th>
                     <th>Nombre</th>
                     <th>Genero</th>
@@ -89,6 +148,11 @@
                     <th>Precio Entrada</th>
                 </tr>
                 <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </td>
                     <td>1</td>
                     <td>La Ballena</td>
                     <td>Drama/Ficción</td>
@@ -96,6 +160,11 @@
                     <th>$3.500</th>
                 </tr>
                 <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </td>
                     <td>2</td>
                     <td>John Wick 4</td>
                     <td>Accion</td>
@@ -103,6 +172,11 @@
                     <th>$3.500</th>
                 </tr>
                 <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </td>
                     <td>3</td>
                     <td>Elemental</td>
                     <td>Infantil</td>
@@ -113,50 +187,140 @@
         </div>
     </div>
 
+    <div id="crea_pelicula" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+            <header class="w3-container w3-black">
+                <span onclick="document.getElementById('crea_pelicula').style.display='none'"
+                    class="w3-button w3-display-topright w3-hover-red">Cerrar</span>
+            </header>
+            <div class="w3-container">
+                <h1>Ingrese la siguiente información:</h1>
+                <form class="w3-container">
+                    <p class="w3-wide w3-text-black">
+                        ID Pelicula: ?
+                    </p>
+                    <p>
+                        <label class="w3-text-black">Nombre</label>
+                        <input class="w3-input w3-gray" type="text">
+                    </p>
+                    <p>
+                        <label class="w3-text-black">Genero</label>
+                        <input class="w3-input w3-gray" type="text">
+                    </p>
+                    <p>
+                        <label class="w3-text-black">Año</label>
+                        <input class="w3-input w3-gray" type="text">
+                    </p>
+                    <p>
+                        <label class="w3-text-black">Precio Entrada</label>
+                        <input class="w3-input w3-gray" type="text">
+                    </p>
+                </form>
+            </div>
+            <div class="w3-center w3-padding-16">
+                <button class="w3-button w3-black w3-hover-green">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Clientes -------------------------------------------------------------------------------->
     <div id="Clientes" class="city" style="display:none">
         <h2 class="w3-center w3-animate-zoom w3-opacity w3-wide"><b>Clientes</b></h2>
         <!-- Botones CRUD -->
         <div class="w3-animate-zoom" style="padding-left: 2%;">
-            <button class="w3-button w3-black w3-hover-blue">+</button>
-            <button class="w3-button w3-black w3-hover-amber">Editar</button>
-            <button class="w3-button w3-black w3-hover-red">Eliminar</button>
+            <button class="w3-button w3-black w3-hover-blue" onclick="document.getElementById('crea_cliente').style.display='block'">+</button>
+            <button class="w3-button w3-black w3-hover-amber w3-disabled">Editar</button>
+            <button class="w3-button w3-black w3-hover-red w3-disabled">Eliminar</button>
         </div>
         <br>
-        <!-- Tabla de Ventas -->
+        <!-- Tabla de Clientes -->
         <div class="w3-container w3-animate-zoom">
             <table class="w3-table w3-table-all">
                 <tr class="w3-black">
+                    <th>Selector</th>
                     <th>ID Cliente</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
                 </tr>
                 <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </td>
                     <td>1</td>
                     <td>Matias</td>
                     <td>Lagos</td>
                 </tr>
                 <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </td>
                     <td>2</td>
                     <td>Matias</td>
                     <td>Larenas</td>
                 </tr>
                 <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </td>
                     <td>3</td>
                     <td>Su</td>
                     <td>Smith</td>
                 </tr>
                 <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </td>
                     <td>4</td>
                     <td>Raul</td>
                     <td>Gonzalez</td>
                 </tr>
                 <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox">
+                        </label>
+                    </td>
                     <td>5</td>
                     <td>Carlos</td>
                     <td>Villenas</td>
                 </tr>
             </table>
+        </div>
+
+        <div id="crea_cliente" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                <header class="w3-container w3-black">
+                    <span onclick="document.getElementById('crea_cliente').style.display='none'"
+                        class="w3-button w3-display-topright w3-hover-red">Cerrar</span>
+                </header>
+                <div class="w3-container">
+                    <h1>Ingrese la siguiente información:</h1>
+                    <form class="w3-container">
+                        <p class="w3-wide w3-text-black">
+                            ID Cliente: ?
+                        </p>
+                        <p>
+                            <label class="w3-text-black">Nombre</label>
+                            <input class="w3-input w3-gray" type="text">
+                        </p>
+                        <p>
+                            <label class="w3-text-black">Apellido</label>
+                            <input class="w3-input w3-gray" type="text">
+                        </p>
+                    </form>
+                </div>
+                <div class="w3-center w3-padding-16">
+                    <button class="w3-button w3-black w3-hover-green">Confirmar</button>
+                </div>
+            </div>
         </div>
     </div>
     <script>
@@ -169,6 +333,8 @@
             document.getElementById(cityName).style.display = "block";
         }
     </script>
+
+
 </body>
 
 </html>
