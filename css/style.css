@@ -6,16 +6,16 @@
 }
 
 .container {
-    background-color;
+    background-color:black;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-   
+    background-image: url(img/logo.png);
     background-position: center;
     background-repeat: unset;
     background-size: cover;
-    
+    color: #fff;
     
 }
 
@@ -23,7 +23,7 @@
     text-align: center;
     width: 400px;
     padding: 1rem;
-    background-color: transparent;
+    background-color: rgba(199, 199, 195, .427);
     border-radius: 2rem;
     
    
@@ -53,8 +53,16 @@ h1 {
     padding: 1rem;
     font-weight: 400;
    border-radius: 2rem;
-   background-color: transparent ;
    
+   
+   
+
+  
+   
+   
+  
+ 
+  
 
 }
 
@@ -74,7 +82,7 @@ h1 {
     width: 100%;
     padding: .5rem;
     cursor: pointer;
-    background-color: rgb(6, 6, 6);
+    background-color: rgb(32, 69, 181);
     border: none;
     color: #fff;
 }
@@ -85,8 +93,7 @@ h1 {
     margin-bottom: 1rem;
     width: 150px;
     font-size: .7rem;
-    color: black
-    ;
+    color: blue;
     cursor: pointer;
     text-decoration: underline;
 }

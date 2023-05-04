@@ -1,0 +1,116 @@
+:root {
+    --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+        'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+        'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+    --transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-boxz;
+}
+
+body {
+    font-family: var(--font-mono);
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+section h1 {
+    font-size: 3em;
+}
+
+section h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 2.5em
+}
+
+section form {
+    padding: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 200px;
+    border-radius: 20px;
+    border: 2px solid rgba(0, 0, 0, .1);
+}
+
+section form label {
+    width: 100%;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+section form input {
+    /* registro*/
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.8em;
+    border-radius: 9px;
+    border: none;
+    outline-color: #192a19;
+    background-color: #eee;
+}
+
+section form input[type='submit'] {
+    /* boton de registro */
+    margin-top: 1.5em;
+    background-color: #090d1a;
+    color: #fff;
+    font-family: var(--font-mono);
+    transition: var(--transition);
+}
+
+section form input[type='submit']:active {
+    transform: scale(0.97);
+}
+
+section p {
+    /* separacion entre resitro y ya tienes una cuent*/
+    margin-top: 1.5em;
+
+}
+
+
+section p a {
+    /* letra de registro(ya tienes una uenta */
+    text-decoration: none;
+    color: #003DFF;
+}
+
+
+/* Home */
+
+section button {
+    background-color: #003DFF;
+    color: #fff;
+    font-family: var(--font-mono);
+    transition: var(--transition);
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 9px;
+    margin-top: 1.5em;
+    font-size: 1em;
+}
+
+button {
+    background-color: black;
+    padding: 0.5em 1em;
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-mono);
+}
