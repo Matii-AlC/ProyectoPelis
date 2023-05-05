@@ -192,11 +192,13 @@
                         <p>
                             <label class="w3-text-black">Apellido</label>
                             <input id="cliente_apellido" class="w3-input w3-gray" type="text" onblur="validarCapellido()">
+                            <p id="helpApellidoCliente"></p>
                         </p>
                     </form>
                 </div>
+                
                 <div class="w3-center w3-padding-16">
-                    <button class="w3-button w3-black w3-hover-green" onclick="agregarCliente()">Confirmar</button>
+                    <button id="btn-confirmar-cliente" class="w3-button w3-black w3-hover-green" onclick="agregarCliente();">Confirmar</button>
                 </div>
             </div>
         </div>

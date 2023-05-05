@@ -1,6 +1,8 @@
 var contadorVenta = 1;
 var contadorPelicula = 1;
 var contadorCliente = 1;
+var cliente_nombre;
+var cliente_apellido;
 
 function agregarVenta() {
     let ventas = document.getElementById("ventas");
@@ -42,40 +44,63 @@ function agregarPelicula() {
         <th>$3.500</th>
     </tr>
     `
-    peliculas.innerHTML+=newPelicula;
+    peliculas.innerHTML += newPelicula;
     contadorPelicula++;
-    document.getElementById('crea_pelicula').style.display = 'none'
+    document.getElementById('crea_pelicula').style.display = 'none';
 }
+
 
 /*********************************************************************************************/
-function agregarCliente(){
+function agregarCliente() {
     let clientes = document.getElementById("cliente");
-    let newCliente = `
-    <tr>
-        <td>
-            <label>
-                <input id="cliente${contadorCliente}" type="checkbox">
-            </label>
-        </td>
-        <td>${contadorCliente}</td>
-        <td>Matias</td>
-        <td>Lagos</td>
-    </tr>
-    `
-    clientes.innerHTML+=newCliente;
-    contadorCliente++;
-    document.getElementById('crea_cliente').style.display = 'none'
+
+    if (validarCnombre() && validarCapellido()) {
+        let newCliente = `
+        <tr>
+            <td>
+                <label>
+                    <input id="cliente${contadorCliente}" type="checkbox">
+                </label>
+            </td>
+            <td>${contadorCliente}</td>
+            <td>${cliente_nombre}</td>
+            <td>${cliente_apellido}</td>
+        </tr>
+        `
+        clientes.innerHTML += newCliente;
+        contadorCliente++;
+        document.getElementById('crea_cliente').style.display = 'none';
+        vaciar_crea_cliente();
+    } else {
+        $("#helpCliente").text("⛔Hay nformación mal ingresada")
+    }
 }
 
-function validarCnombre(){
-    if($("#cliente_nombre").length <= 2){
+
+function validarCnombre() {
+    $("#helpNombreCliente").show();
+    if ($("#cliente_nombre").val().length < 1) {
         $("#helpNombreCliente").text("⛔ El nombre debe tener minimo 2 letras");
     } else {
-        $("#helpNombreCliente").fadeOut();
+        $("#helpNombreCliente").text("✔");
+        cliente_nombre = $("#cliente_nombre").val();
+        return true;
     }
 }
-function validarCapellido(){
-    if($("#cliente_apellido").length < 3){
-        
+
+function validarCapellido() {
+    $("#helpApellidoCliente").show();
+    if ($("#cliente_apellido").val().length < 2) {
+        $("#helpApellidoCliente").text("⛔ El apellido debe tener minimo 3 letras");
+    } else {
+        $("#helpApellidoCliente").text("✔");
+        cliente_apellido = $("#cliente_apellido").val();
+        return true;
     }
+}
+function vaciar_crea_cliente(){
+    $("#cliente_nombre").val("");
+    $("#cliente_apellido").val("");
+    $("#helpNombreCliente").hide();
+    $("#helpApellidoCliente").hide();
 }
