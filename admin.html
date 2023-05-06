@@ -128,19 +128,29 @@
                     </p>
                     <p>
                         <label class="w3-text-black">Nombre</label>
-                        <input id="pelicula_nombre" class="w3-input w3-gray" type="text">
+                        <input id="pelicula_nombre" class="w3-input w3-gray" type="text" onblur="validarPeliculaNombre()">
+                        <p id="helpPeliculaNombre"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Genero</label>
-                        <input id="pelicula_genero" class="w3-input w3-gray" type="text">
+                        <br>
+                        <select name="genero" id="genero" class="w3-input w3-gray" onblur="validarGenero()">
+                            <option value="">Seleccione...</option>
+                            <option value="Terror">Terror</option>
+                            <option value="Comedia">Comedia</option>
+                            <option value="Accion">Acción</option>
+                        </select>
+                        <p id="helpPeliculaGenero"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Año</label>
-                        <input id="pelicula_anno" class="w3-input w3-gray" type="text">
+                        <input id="pelicula_anno" class="w3-input w3-gray" type="text" onblur="validarAnno()">
+                        <p id="helpPeliculaAnno"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Precio Entrada</label>
-                        <input id="pelicula_precio" class="w3-input w3-gray" type="text">
+                        <input id="pelicula_precio" class="w3-input w3-gray" type="text" onblur="validarPrecio()">
+                        <p id="helpPeliculaPrecio"></p>
                     </p>
                 </form>
             </div>
