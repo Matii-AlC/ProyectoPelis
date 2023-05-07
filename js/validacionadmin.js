@@ -30,6 +30,30 @@ function agregarVenta() {
     document.getElementById('crea_venta').style.display = 'none';
 }
 
+// Cargar selectores
+function cargarPeliculas(){
+    let selector = document.getElementById("venta_peliculas");
+    for( var i = 1 ; i < contadorPelicula ; i++){
+        // Obtener nombres de peliculas
+        let nombre = $("#peli"+i).text();
+        let opcion = `
+        <option id ="op" value="${nombre}">${nombre}</option>
+        `;
+        selector.innerHTML+=opcion;
+    }
+}
+function vaciarPeliculas() {
+    document.getElementById("op").remove();
+}
+
+
+function vaciar_crea_venta(){
+    $("#helpVentaPelicula").hide();
+    $("#helpVentaCliente").hide();
+    $("#helpVentaFecha").hide();
+    $("#helpVentaHora").hide();
+}
+
 /*******************************************************************************/
 
 function agregarPelicula() {
@@ -43,7 +67,7 @@ function agregarPelicula() {
                 </label>
             </td>
             <td>${contadorPelicula}</td>
-            <td>${pelicula_nombre}</td>
+            <td id= "peli${contadorPelicula}">${pelicula_nombre}</td>
             <td>${pelicula_genero}</td>
             <th>${pelicula_anno}</th>
             <th>${pelicula_precio}</th>
@@ -88,7 +112,7 @@ function validarAnno() {
 }
 function validarPrecio() {
     $("#helpPeliculaPrecio").show();
-    if ($("#pelicula_precio").val() < 0) {
+    if ($("#pelicula_precio").val() <= 0) {
         $("#helpPeliculaPrecio").text("⛔ Debe ingresar un precio válido")
     } else {
         $("#helpPeliculaPrecio").hide();

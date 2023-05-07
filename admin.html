@@ -63,23 +63,31 @@
                     </p>
                     <p>
                         <label class="w3-text-black">Pelicula</label>
-                        <input id="venta_pelicula" class="w3-input w3-gray" type="text">
+                        <select id="venta_peliculas" class="w3-input w3-gray" onclick="cargarPeliculas()" onblur="vaciar_peliculas();">
+                            <option value="">Seleccione...</option>
+                        </select>
+                        <p id="helpVentaPelicula"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Cliente</label>
-                        <input id="venta_cliente" class="w3-input w3-gray" type="text">
+                        <select id="venta_clientes" class="w3-input w3-gray">
+                            <option value="">Seleccione...</option>
+                        </select>
+                        <p id="helpVentaCliente"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Fecha</label>
                         <input id="venta_fecha" class="w3-input w3-gray" type="text">
+                        <p id="helpVentaFecha"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Hora</label>
                         <input id="venta_hora" class="w3-input w3-gray" type="text">
+                        <p id="helpVentaHora"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Precio Venta</label>
-                        <input id="venta_precio" class="w3-input w3-gray" type="text">
+                        <input id="venta_precio" class="w3-input w3-gray w3-disabled" type="text">
                     </p>
                 </form>
             </div>
@@ -117,7 +125,7 @@
     <div id="crea_pelicula" class="w3-modal">
         <div class="w3-modal-content w3-card-4 w3-animate-zoom">
             <header class="w3-container w3-black">
-                <span onclick="document.getElementById('crea_pelicula').style.display='none'"
+                <span onclick="document.getElementById('crea_pelicula').style.display='none'; vaciar_crea_pelicula();"
                     class="w3-button w3-display-topright w3-hover-red">Cerrar</span>
             </header>
             <div class="w3-container">
@@ -185,7 +193,7 @@
         <div id="crea_cliente" class="w3-modal">
             <div class="w3-modal-content w3-card-4 w3-animate-zoom">
                 <header class="w3-container w3-black">
-                    <span onclick="document.getElementById('crea_cliente').style.display='none'"
+                    <span onclick="document.getElementById('crea_cliente').style.display='none'; vaciar_crea_cliente();"
                         class="w3-button w3-display-topright w3-hover-red">Cerrar</span>
                 </header>
                 <div class="w3-container">
