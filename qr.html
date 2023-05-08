@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega entrada</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/tema-negro.css">
+    <script src="js/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <div class="container p-5 m-5">
+        <h1 class="text-center">Su entrada ha sido generada</h1>
+        <!-- Codigo QR -->
+        <div>
+            $(document).ready(function () {
+
+
+                $.getJSON("https://mindicador.cl/api", function (datos) {
+                    $("#dolar").text("$" + datos.dolar.valor + " CLP");
+                    $("#uf").text("$" + datos.uf.valor + " CLP");
+                    $("#ipc").text(datos.ipc.valor + "%");
+    
+                }).fail(function () {
+                    $("#dolar").text("Esperando conexion...");
+                });
+            });
+        </div>
+    </div>
+
+    <footer class="blockquote-footer">
+        <p class="text-center">
+            &copy;Matias Lagos
+        </p>
+    </footer>
+</body>
+
+</html>

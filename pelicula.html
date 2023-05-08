@@ -196,7 +196,7 @@ class="fa fa-bars"></i></a>
         <!-- Ticket Modal -->
         <div id="ticketModal" class="w3-modal">
             <div class="w3-modal-content w3-animate-top w3-card-4">
-                 <!-- color de fondo  -->
+                <!-- color de fondo  -->
                 <header class="w3-container w3-teal w3-center w3-black">
                     <span onclick="document.getElementById('ticketModal').style.display='none'"
                         class="w3-button w3-teal w3-black w3-display-topright">×</span>
@@ -209,7 +209,11 @@ class="fa fa-bars"></i></a>
 <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="FECHA ENTRADA" required DATE="date" value="2020-11-16T20:00"></p>
 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="CORREO" CORREO="CORREO"></p>
 
-<p><button class="w3-button w3-light-grey w3-block" type="submit">COMPRAR</button></p>
+
+<button class="w3-button w3-light-grey w3-block" type="submit" onclick="document.getElementById('ticketModal').style.display='none'">
+    <a href="qr.html" target="_blank" style="text-decoration: none;"></a>COMPRAR</a>
+</button>
+
 </form>
             </div>
         </div>
