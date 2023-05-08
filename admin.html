@@ -63,31 +63,34 @@
                     </p>
                     <p>
                         <label class="w3-text-black">Pelicula</label>
-                        <select id="venta_peliculas" class="w3-input w3-gray" onclick="cargarPeliculas()" onblur="vaciar_peliculas();">
-                            <option value="">Seleccione...</option>
-                        </select>
+                        <input id="ventaPelicula" class="w3-input w3-gray" type="text" onblur="validarVentaPelicula()">
                         <p id="helpVentaPelicula"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Cliente</label>
-                        <select id="venta_clientes" class="w3-input w3-gray">
-                            <option value="">Seleccione...</option>
-                        </select>
+                        <input id="venta_cliente" class="w3-input w3-gray" type="text" onblur="validarVentaCliente()">
                         <p id="helpVentaCliente"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Fecha</label>
-                        <input id="venta_fecha" class="w3-input w3-gray" type="text">
+                        <input id="venta_fecha" class="w3-input w3-gray" type="date" onblur="validarVentaFecha()">
                         <p id="helpVentaFecha"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Hora</label>
-                        <input id="venta_hora" class="w3-input w3-gray" type="text">
+                        <select id="venta_hora" class="w3-input w3-gray" onblur="validarVentaHora()">
+                            <option value="">Seleccione Hora...</option>
+                            <option value="20:00 hrs">20:00 hrs</option>
+                            <option value="21:00 hrs">21:00 hrs</option>
+                            <option value="22:00 hrs">22:00 hrs</option>
+                            <option value="23:00 hrs">23:00 hrs</option>
+                        </select>
                         <p id="helpVentaHora"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Precio Venta</label>
-                        <input id="venta_precio" class="w3-input w3-gray w3-disabled" type="text">
+                        <input id="venta_precio" class="w3-input w3-gray" type="number" onblur="validarVentaPrecio()">
+                        <p id="helpVentaPrecio"></p>
                     </p>
                 </form>
             </div>
@@ -152,12 +155,12 @@
                     </p>
                     <p>
                         <label class="w3-text-black">Año</label>
-                        <input id="pelicula_anno" class="w3-input w3-gray" type="text" onblur="validarAnno()">
+                        <input id="pelicula_anno" class="w3-input w3-gray" type="number" onblur="validarAnno()">
                         <p id="helpPeliculaAnno"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Precio Entrada</label>
-                        <input id="pelicula_precio" class="w3-input w3-gray" type="text" onblur="validarPrecio()">
+                        <input id="pelicula_precio" class="w3-input w3-gray" type="number" onblur="validarPrecio()">
                         <p id="helpPeliculaPrecio"></p>
                     </p>
                 </form>
