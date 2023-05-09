@@ -8,6 +8,8 @@
     <title>Administrador</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/tema-negro.css">
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/validacionadmin.js"></script>
 </head>
 
 <body>
@@ -33,7 +35,7 @@
         <br>
         <!-- Tabla de Ventas -->
         <div class="w3-container w3-animate-zoom">
-            <table class="w3-table w3-table-all">
+            <table id="ventas" class="w3-table w3-table-all">
                 <tr class="w3-black">
                     <th>Selector</th>
                     <th>Nro Venta</th>
@@ -42,45 +44,6 @@
                     <th>Fecha</th>
                     <th>Hora</th>
                     <th>Total Venta</th>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                    <td>1</td>
-                    <td>La Ballena</td>
-                    <td>Raul Gonzalez</td>
-                    <td>17/04/23</td>
-                    <td>20:00</td>
-                    <td>$3.500</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                    <td>2</td>
-                    <td>La Ballena</td>
-                    <td>Raul Gonzalez</td>
-                    <td>17/04/23</td>
-                    <td>20:00</td>
-                    <td>$3.500</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                    <td>3</td>
-                    <td>La Ballena</td>
-                    <td>Carlos Villenas</td>
-                    <td>17/04/23</td>
-                    <td>20:00</td>
-                    <td>$3.500</td>
                 </tr>
             </table>
         </div>
@@ -96,32 +59,43 @@
                 <h1>Ingrese la siguiente información:</h1>
                 <form class="w3-container">
                     <p class="w3-wide w3-text-black">
-                        Nro de Compra: ?
+                        Nro de Venta: <p id="nventa">?</p>
                     </p>
                     <p>
                         <label class="w3-text-black">Pelicula</label>
-                        <input class="w3-input w3-gray" type="text">
+                        <input id="ventaPelicula" class="w3-input w3-gray" type="text" onblur="validarVentaPelicula()">
+                        <p id="helpVentaPelicula"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Cliente</label>
-                        <input class="w3-input w3-gray" type="text">
+                        <input id="venta_cliente" class="w3-input w3-gray" type="text" onblur="validarVentaCliente()">
+                        <p id="helpVentaCliente"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Fecha</label>
-                        <input class="w3-input w3-gray" type="text">
+                        <input id="venta_fecha" class="w3-input w3-gray" type="date" onblur="validarVentaFecha()">
+                        <p id="helpVentaFecha"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Hora</label>
-                        <input class="w3-input w3-gray" type="text">
+                        <select id="venta_hora" class="w3-input w3-gray" onblur="validarVentaHora()">
+                            <option value="">Seleccione Hora...</option>
+                            <option value="20:00 hrs">20:00 hrs</option>
+                            <option value="21:00 hrs">21:00 hrs</option>
+                            <option value="22:00 hrs">22:00 hrs</option>
+                            <option value="23:00 hrs">23:00 hrs</option>
+                        </select>
+                        <p id="helpVentaHora"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Precio Venta</label>
-                        <input class="w3-input w3-gray" type="text">
+                        <input id="venta_precio" class="w3-input w3-gray" type="number" onblur="validarVentaPrecio()">
+                        <p id="helpVentaPrecio"></p>
                     </p>
                 </form>
             </div>
             <div class="w3-center w3-padding-16">
-                <button class="w3-button w3-black w3-hover-green">Confirmar</button>
+                <button class="w3-button w3-black w3-hover-green" onclick="agregarVenta()">Confirmar</button>
             </div>
         </div>
     </div>
@@ -138,7 +112,7 @@
         <br>
         <!-- Tabla de Peliculas -->
         <div class="w3-container w3-animate-zoom">
-            <table class="w3-table w3-table-all">
+            <table id="pelicula" class="w3-table w3-table-all">
                 <tr class="w3-black">
                     <th>Selector</th>
                     <th>ID Pelicula</th>
@@ -147,42 +121,6 @@
                     <th>Año</th>
                     <th>Precio Entrada</th>
                 </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                    <td>1</td>
-                    <td>La Ballena</td>
-                    <td>Drama/Ficción</td>
-                    <th>2022</th>
-                    <th>$3.500</th>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                    <td>2</td>
-                    <td>John Wick 4</td>
-                    <td>Accion</td>
-                    <th>2023</th>
-                    <th>$3.500</th>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                    <td>3</td>
-                    <td>Elemental</td>
-                    <td>Infantil</td>
-                    <th>2023</th>
-                    <th>$3.500</th>
-                </tr>
             </table>
         </div>
     </div>
@@ -190,35 +128,45 @@
     <div id="crea_pelicula" class="w3-modal">
         <div class="w3-modal-content w3-card-4 w3-animate-zoom">
             <header class="w3-container w3-black">
-                <span onclick="document.getElementById('crea_pelicula').style.display='none'"
+                <span onclick="document.getElementById('crea_pelicula').style.display='none'; vaciar_crea_pelicula();"
                     class="w3-button w3-display-topright w3-hover-red">Cerrar</span>
             </header>
             <div class="w3-container">
                 <h1>Ingrese la siguiente información:</h1>
                 <form class="w3-container">
                     <p class="w3-wide w3-text-black">
-                        ID Pelicula: ?
+                        ID Pelicula: <p id="id_pelicula">?</p>
                     </p>
                     <p>
                         <label class="w3-text-black">Nombre</label>
-                        <input class="w3-input w3-gray" type="text">
+                        <input id="pelicula_nombre" class="w3-input w3-gray" type="text" onblur="validarPeliculaNombre()">
+                        <p id="helpPeliculaNombre"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Genero</label>
-                        <input class="w3-input w3-gray" type="text">
+                        <br>
+                        <select name="genero" id="genero" class="w3-input w3-gray" onblur="validarGenero()">
+                            <option value="">Seleccione...</option>
+                            <option value="Terror">Terror</option>
+                            <option value="Comedia">Comedia</option>
+                            <option value="Accion">Acción</option>
+                        </select>
+                        <p id="helpPeliculaGenero"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Año</label>
-                        <input class="w3-input w3-gray" type="text">
+                        <input id="pelicula_anno" class="w3-input w3-gray" type="number" onblur="validarAnno()">
+                        <p id="helpPeliculaAnno"></p>
                     </p>
                     <p>
                         <label class="w3-text-black">Precio Entrada</label>
-                        <input class="w3-input w3-gray" type="text">
+                        <input id="pelicula_precio" class="w3-input w3-gray" type="number" onblur="validarPrecio()">
+                        <p id="helpPeliculaPrecio"></p>
                     </p>
                 </form>
             </div>
             <div class="w3-center w3-padding-16">
-                <button class="w3-button w3-black w3-hover-green">Confirmar</button>
+                <button class="w3-button w3-black w3-hover-green" onclick="agregarPelicula()">Confirmar</button>
             </div>
         </div>
     </div>
@@ -235,62 +183,12 @@
         <br>
         <!-- Tabla de Clientes -->
         <div class="w3-container w3-animate-zoom">
-            <table class="w3-table w3-table-all">
+            <table id="cliente" class="w3-table w3-table-all">
                 <tr class="w3-black">
                     <th>Selector</th>
                     <th>ID Cliente</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                    <td>1</td>
-                    <td>Matias</td>
-                    <td>Lagos</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                    <td>2</td>
-                    <td>Matias</td>
-                    <td>Larenas</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                    <td>3</td>
-                    <td>Su</td>
-                    <td>Smith</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                    <td>4</td>
-                    <td>Raul</td>
-                    <td>Gonzalez</td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox">
-                        </label>
-                    </td>
-                    <td>5</td>
-                    <td>Carlos</td>
-                    <td>Villenas</td>
                 </tr>
             </table>
         </div>
@@ -298,27 +196,30 @@
         <div id="crea_cliente" class="w3-modal">
             <div class="w3-modal-content w3-card-4 w3-animate-zoom">
                 <header class="w3-container w3-black">
-                    <span onclick="document.getElementById('crea_cliente').style.display='none'"
+                    <span onclick="document.getElementById('crea_cliente').style.display='none'; vaciar_crea_cliente();"
                         class="w3-button w3-display-topright w3-hover-red">Cerrar</span>
                 </header>
                 <div class="w3-container">
                     <h1>Ingrese la siguiente información:</h1>
                     <form class="w3-container">
                         <p class="w3-wide w3-text-black">
-                            ID Cliente: ?
+                            ID Cliente: <p id="id_cliente">?</p>
                         </p>
                         <p>
                             <label class="w3-text-black">Nombre</label>
-                            <input class="w3-input w3-gray" type="text">
+                            <input id="cliente_nombre" class="w3-input w3-gray" type="text" onblur="validarCnombre()">
+                            <p id="helpNombreCliente"></p>
                         </p>
                         <p>
                             <label class="w3-text-black">Apellido</label>
-                            <input class="w3-input w3-gray" type="text">
+                            <input id="cliente_apellido" class="w3-input w3-gray" type="text" onblur="validarCapellido()">
+                            <p id="helpApellidoCliente"></p>
                         </p>
                     </form>
                 </div>
+                
                 <div class="w3-center w3-padding-16">
-                    <button class="w3-button w3-black w3-hover-green">Confirmar</button>
+                    <button id="btn-confirmar-cliente" class="w3-button w3-black w3-hover-green" onclick="agregarCliente();">Confirmar</button>
                 </div>
             </div>
         </div>
