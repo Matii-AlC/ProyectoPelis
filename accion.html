@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="app.js" async></script>
  
     <title>PELICULAS </title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -31,7 +33,7 @@ class="fa fa-bars"></i></a>
 
 <a href="login.html" class="w3-bar-item w3-button w3-padding-large">SALIR</a>
 
-<a href="index.html" class="w3-bar-item w3-button w3-padding-large">ESTRENOS</a>
+<a href="index.apihtml" class="w3-bar-item w3-button w3-padding-large">ESTRENOS</a>
 <a href="pelicula.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOGAR</a>
 
 
@@ -89,141 +91,168 @@ class="fa fa-bars"></i></a>
 
         <!-- seccion de  lo mas visto  -->
         
-</div>
-<div class="item" id="contenedor-items"></div>
-
-<div class="" style="max-width:3000px">
-               
-    <div class="contenedor">
-        <!-- Contenedor de elementos -->
-        <div class="contenedor-items">
-            <h2 class="w3-wide">LO MAS RECOMENDADO EN PELICULAS DE ACCIÓN!</h2>
-            <div class="item" id="contenedor-items">
-                
-                
-                <span class="titulo-item">CREED</span>
-                <img src="img/creed.png" alt="" class="img-item">
-                <span class="precio-item">$3500</span>
-                <button class="w3-button w3-black w3-margin-bottom"
-                onclick="document.getElementById('ticketModal').style.display='block'">COMPRAR</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">MAD MAX FURY ROAD</span>
-                <img src="img/movies_Mad_Max_Fury_Road_Mad_Max-52431.jpg" alt="" class="img-item">
-                <span class="precio-item">$3233</span>
-                <button class="w3-button w3-black w3-margin-bottom"
-                onclick="document.getElementById('ticketModal').style.display='block'">COMPRAR</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">BATMAN</span>
-                <img src="img/batman.png" alt="" class="img-item">
-                <span class="precio-item">$3.500</span>
-                <button class="w3-button w3-black w3-margin-bottom"
-                onclick="document.getElementById('ticketModal').style.display='block'">COMPRAR</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">AVENGERS</span>
-                <img src="img/images.jpg" alt="" class="img-item">
-                <span class="precio-item">$100</span>
-                <button class="w3-button w3-black w3-margin-bottom"
-                onclick="document.getElementById('ticketModal').style.display='block'">COMPRAR</button>
-            </div>
-          
-            <div class="item">
-                <span class="titulo-item">INTERESTELAR</span>
-                <img src="img/interestelar.png" alt="" class="img-item">
-                <span class="precio-item">$18.000</span>
-                <button class="w3-button w3-black w3-margin-bottom"
-                onclick="document.getElementById('ticketModal').style.display='block'">COMPRAR</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">SUPER MARIO</span>
-                <img src="img/supermario.png" alt="" class="img-item">
-                <span class="precio-item">$4.000</span>
-                <button class="w3-button w3-black w3-margin-bottom"
-                onclick="document.getElementById('ticketModal').style.display='block'">COMPRAR</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">65</span>
-                <img src="img/65.png" alt="" class="img-item">
-                <span class="precio-item">$2.800</span>
-                <button class="w3-button w3-black w3-margin-bottom"
-                onclick="document.getElementById('ticketModal').style.display='block'">COMPRAR</button>
-            </div>
-
+        <!-- seccion de  lo mas visto  -->
+        
     </div>
-    </div>
-        <!-- Ticket Modal -->
-        <div id="ticketModal" class="w3-modal">
-            <div class="w3-modal-content w3-animate-top w3-card-4">
-                 <!-- color de fondo  -->
-                <header class="w3-container w3-teal w3-center w3-black">
-                    <span onclick="document.getElementById('ticketModal').style.display='none'"
-                        class="w3-button w3-teal w3-black w3-display-topright">×</span>
-                    <h2 class="w3-black"><i class="fa fa-suitcase w3-margin-right"></i>ENTRADA</h2>
-                </header>
-                <form action="" target="_blank">
-<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="NOMBRE" NOMBRE="NOMBRE"></p>
-<p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="CANTIDAD" required CANTIDAD="CANTIDAD"></p>
-
-<p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="FECHA ENTRADA" required DATE="date" value="2020-11-16T20:00"></p>
-<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="CORREO" CORREO="CORREO"></p>
-
-<p><button class="w3-button w3-light-grey w3-block" type="submit">COMPRAR</button></p>
-</form>
+    <div class="item" id="contenedor-items"></div>
+    
+    <div class="" style="max-width:3000px"></div>
+    
+        <section class="contenedor">
+            <!-- Contenedor de elementos -->
+            <div class="contenedor-items">
+                <h2 class="w3-wide">LO MAS RECOMENDADO EN PELICULAS DE ACCIÓN!</h2>
+                <div class="item"  id="contenedor-items">
+                    <span class="titulo-item">JOHN WICK</span>
+                    <img src="img/johnwick.jpg" alt="" class="img-item">
+                    <span class="precio-item">$1.500</span>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">CREED</span>
+                    <img src="img/creed.jpg" alt="" class="img-item">
+                    <span class="precio-item">$2.000</span>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">DUNGEONS</span>
+                    <img src="img/dungeons.jpg" alt="" class="img-item">
+                    <span class="precio-item">$5.000</span>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">ANTMAN</span>
+                    <img src="img/antman.jpg" alt="" class="img-item">
+                    <span class="precio-item">$1.000</span>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">BABYLON</span>
+                    <img src="img/babylon.jpg" alt="" class="img-item">
+                    <span class="precio-item">$2.000</span>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+    
+                <div class="item">
+                    <span class="titulo-item">BATMAN</span>
+                    <img src="img/batman.png" alt="" class="img-item">
+                    <span class="precio-item">$4.000</span>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">CREED</span>
+                    <img src="img/creed.jpg" alt="" class="img-item">
+                    <span class="precio-item">$2.000</span>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+                <div class="item">
+                    <span class="titulo-item">DECISION </span>
+                    <img src="img/decision.png" alt="" class="img-item">
+                    <span class="precio-item">$2.800</span>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Carrito de Compras -->
+            <div class="carrito" id="carrito">
+                <div class="header-carrito">
+                    <h2>Tu Carrito</h2>
+                </div>
+    
+                <div class="carrito-items">
+                    <!-- 
+                    <div class="carrito-item">
+                        <img src="img/boxengasse.png" width="80px" alt="">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">Box Engasse</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$15.000,00</span>
+                        </div>
+                       <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash"></i>
+                       </span>
+                    </div>
+                    <div class="carrito-item">
+                        <img src="img/skinglam.png" width="80px" alt="">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">Skin Glam</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$18.000,00</span>
+                        </div>
+                       <button class="btn-eliminar">
+                            <i class="fa-solid fa-trash"></i>
+                       </button>
+                    </div>
+                     -->
+                </div>
+                <div class="carrito-total">
+                    <div class="fila">
+                        <strong>Tu Total</strong>
+                        <span class="carrito-precio-total">
+                            $120.000,00
+                        </span>
+                    </div>
+                    <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+                </div>
             </div>
         </div>
-    </div>
-    <script>
-        //  Presentación automática de las imagenes para q cambien en 4 segundos
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
+        </section>
+        <script>
+            //  Presentación automática de las imagenes para q cambien en 4 segundos
+            var myIndex = 0;
+            carousel();
+    
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) { myIndex = 1 }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 4000);
             }
-            myIndex++;
-            if (myIndex > x.length) { myIndex = 1 }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 4000);
-        }
-
-
-        //cambiar al menu al hacer clic
-        function myFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
+    
+    
+            //cambiar al menu al hacer clic
+            function myFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
             }
-        }
-
-        
-       // cuando se hace clic fuera del modal para cerrar
-        var modal = document.getElementById('ticketModal');
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+    
+            
+           // cuando se hace clic fuera del modal para cerrar
+            var modal = document.getElementById('ticketModal');
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
             }
-        }
-    </script>
-        <!--anuncios del final-->
-        <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-            <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-snapchat w3-hover-opacity"></i>
+        </script>
+            <!--anuncios del final-->
+            <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-snapchat w3-hover-opacity"></i>
+               
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+                <p class="text-center">
+                    &copy;SUMM!
+                </p>
+               
            
-            <i class="fa fa-twitter w3-hover-opacity"></i>
-            <p class="text-center">
-                &copy;SUMM!
-            </p>
-           
-       
-        <!-- Footer end. -->
-        </footer>
-</body>
+            <!-- Footer end. -->
+            </footer>
 </html>
